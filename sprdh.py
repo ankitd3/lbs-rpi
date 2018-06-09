@@ -214,10 +214,10 @@ def process_frame(image):
     return result
 
 #for source_img in os.listdir("test_images/"):
-dirlist = glob.glob('test_images/*.png')
+dirlist = glob.glob('test_images/*.jpg')
 for source_img in dirlist:
     image = mpimg.imread(source_img)
     processed = process_frame(image)
     # s=source_img[12:]
-    mpimg.imsave("out_images/1.png",processed)
+    mpimg.imsave("out_images/1.jpg",processed)
     # time.sleep(6)
