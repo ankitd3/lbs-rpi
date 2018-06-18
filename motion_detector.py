@@ -32,9 +32,11 @@ while True:
 	frame = frame if args.get("video", None) is None else frame[1]
 	text = "Unoccupied"
  
+ 	print(text)
 	# if the frame could not be grabbed, then we have reached the end
 	# of the video
 	if frame is None:
+		print("Breaking")
 		break
  
 	# resize the frame, convert it to grayscale, and blur it
@@ -84,8 +86,6 @@ while True:
 	# if the `q` key is pressed, break from the lop
 	if key == ord("q"):
 		break
-
-	print(text)
  
 # cleanup the camera and close any open windows
 vs.stop() if args.get("video", None) is None else vs.release()
