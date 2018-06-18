@@ -81,8 +81,8 @@
       $l = fgets($myfile);
       fclose($myfile);
 
-      $image='/out_images/1.jpg';
-      /*if(isset($_POST['lane']))
+      /*$image='/out_images/1.jpg';
+      if(isset($_POST['lane']))
       {
        $l_f=$_POST['lane'];
        if($l!=$l_f)
@@ -206,7 +206,7 @@
                       Fastest : <input type="radio" name="lane" id="c" value="3" <?php echo $l3;?> class="radio"> 3 
                     </div>
                     <div class="text-center"> 
-                      <img src="out_images/1.jpg" style="width:500px;height:250px;">
+                      <img src="#" alt="output image" style="width:500px;height:250px;">
                       <img src="<?php if($l==1)
                                         echo "lane1.jpg";
                                       if($l==2)
