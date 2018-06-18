@@ -8,6 +8,7 @@ import math
 # import os
 import time
 import glob
+import requests
 #from moviepy.editor import VideoFileClip
 
 #import glob
@@ -138,6 +139,10 @@ def magic(lines,img):
     fow=open(file_path,'w')
     fow.write(str(lane_number))
     fow.close()
+
+    #sending the lane_number to server so that it stores the lane number in a text file
+    userdata = {"lane_number": lane_number}
+    resp = requests.post('http://13.232.77.187/ks/lbs.php', params=userdata)
 
 def weighted_img(img, initial_img, α=0.8, β=1., λ=0.):
     """
