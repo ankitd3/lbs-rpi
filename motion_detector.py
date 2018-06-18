@@ -31,8 +31,7 @@ while True:
 	frame = vs.read()
 	frame = frame if args.get("video", None) is None else frame[1]
 	text = "Unoccupied"
- 
- 	print(text)
+	print(text)
 	# if the frame could not be grabbed, then we have reached the end
 	# of the video
 	if frame is None:
