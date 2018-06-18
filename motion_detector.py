@@ -20,7 +20,7 @@ if args.get("video", None) is None:
 # otherwise, we are reading from a video file
 else:
 	vs = cv2.VideoCapture(args["video"])
- 
+
 # initialize the first frame in the video stream
 firstFrame = None
 
@@ -84,6 +84,8 @@ while True:
 	# if the `q` key is pressed, break from the lop
 	if key == ord("q"):
 		break
+
+	print(text)
  
 # cleanup the camera and close any open windows
 vs.stop() if args.get("video", None) is None else vs.release()
