@@ -142,7 +142,7 @@ def magic(lines,img):
 
     #sending the lane_number to server so that it stores the lane number in a text file
     userdata = {"lane_number": lane_number}
-    resp = requests.post('http://13.232.77.187/ks/lbs.php', params=userdata)
+    resp = requests.post('http://139.59.15.91/lbs-rpi/lbs.php', params=userdata)
 
 def weighted_img(img, initial_img, α=0.8, β=1., λ=0.):
     """
